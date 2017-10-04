@@ -2,7 +2,7 @@ const express = require('express');
 const passport = require('passport');
 const TwitterStrategy = require('passport-twitter').Strategy;
 
-const PORT = 3000;
+var port = process.env.PORT || 8080;
 
 
 // Configure the Twitter strategy for use by Passport.
@@ -51,7 +51,7 @@ var app = express();
 // Configure view engine to render EJS templates.
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-console.log("Server started at http://127.0.0.1:" + PORT);
+console.log("Server started at http://127.0.0.1:" + port);
 
 // Use application-level middleware for common functionality, including
 // logging, parsing, and session handling.
@@ -94,4 +94,4 @@ app.get('/profile',
     console.log(req.user._json.status.text);
   });
 
-app.listen(PORT);
+app.listen(port);
