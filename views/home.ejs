@@ -1,0 +1,6 @@
+<% if (!user) { %>
+	<p>Welcome! Please login.</p>
+	<a href="/login/twitter"><img src='./assets/sign-in-with-twitter-gray.png' alt='Log In'></a>
+<% } else { %>
+	<p>Hello, <%= user.username %>. View your <a href="/profile">profile</a>.</p>
+<% } %>

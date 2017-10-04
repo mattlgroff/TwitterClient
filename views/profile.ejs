@@ -1,0 +1,18 @@
+<p>
+ID Json: <%= user._json.id %><br/>
+ID Str: <%= user._json.id_str %><br/>
+Username: <%= user._json.screen_name %><br/>
+Name: <%= user._json.name %><br/>
+<% if ( user._json.statuses_count ) { %>
+Number of Tweets: <%= user._json.statuses_count %><br/>
+Latest Tweet: <br/>
+<img src='<%= user.photos[0].value %>'</img><br/>
+<br/>
+@<%= user._json.screen_name %>: <br/>
+<%= user._json.status.text %><br/>
+<br/>
+Created At: <%= user._json.status.created_at %><br/>
+Retweets: <%= user._json.status.retweet_count %><br/>
+Favorites: <%= user._json.status.favorite_count %><br/>
+<% } %>
+</p>

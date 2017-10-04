@@ -1,0 +1,31 @@
+{
+  "name": "twitterclient",
+  "version": "1.0.0",
+  "description": "Twitter Client",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattlgroff/TwitterClient.git"
+  },
+  "author": "Matthew Groff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattlgroff/TwitterClient/issues"
+  },
+  "homepage": "https://github.com/mattlgroff/TwitterClient#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.1",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-twitter": "^1.0.4"
+  }
+}
