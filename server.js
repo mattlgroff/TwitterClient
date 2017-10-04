@@ -15,7 +15,7 @@ var port = process.env.PORT || 8080;
 passport.use(new TwitterStrategy({
     consumerKey: "evuH5CAnx6xRI4UXYKYWEnl4X",
     consumerSecret: "THF3rY0zEDOq5WksIoz3FD4JM0uPTRHlLP94VKoQNEdttzT3jv",
-    callbackURL: 'https://twitter-client-.herokuapp.com/login/twitter/return'
+    callbackURL: 'http://twitter-client-.herokuapp.com/login/twitter/return'
   },
   function(token, tokenSecret, profile, cb) {
     // In this example, the user's Twitter profile is supplied as the user
@@ -51,7 +51,7 @@ var app = express();
 // Configure view engine to render EJS templates.
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-console.log("Server started at https://twitter-client-.herokuapp.com/:" + port);
+console.log("Server started at http://twitter-client-.herokuapp.com/:" + port);
 
 // Use application-level middleware for common functionality, including
 // logging, parsing, and session handling.
